@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="Interruptions" syncable="YES">
+        <attribute name="interruptionDetails" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="interruptionTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="interruptionSleep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sleeps" inverseName="sleepInterruptions" inverseEntity="Sleeps" syncable="YES"/>
+    </entity>
+    <entity name="Settings" syncable="YES">
+        <attribute name="doEndReminder" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="doStartReminder" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="endReminderTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startReminderTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Sleeps" syncable="YES">
+        <attribute name="sleepEnd" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sleepStart" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="sleepInterruptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interruptions" inverseName="interruptionSleep" inverseEntity="Interruptions" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Sleeps" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Interruptions" positionX="-54" positionY="9" width="128" height="90"/>
+        <element name="Settings" positionX="-36" positionY="27" width="128" height="105"/>
+    </elements>
 </model>
