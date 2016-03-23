@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //create the window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //we deleted the storyboard name from info.plist so we have to load our tab bar controller here instead
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"tab bar controller"];
+    [[self window]setRootViewController:tabBarController];
+    [[self window]makeKeyAndVisible];
+    
     return YES;
 }
 
