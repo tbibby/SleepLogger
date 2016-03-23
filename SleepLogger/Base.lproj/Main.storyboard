@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--History-->
@@ -37,36 +36,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzY-wY-OGl">
-                                <rect key="frame" x="14" y="13" width="571" height="730"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxF-DV-4ep" userLabel="ContentView">
-                                        <rect key="frame" x="8" y="9" width="546" height="504"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJU-IY-PeS">
-                                                <rect key="frame" x="173" y="67" width="200" height="44"/>
-                                                <state key="normal" title="Enter Sleep Time"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="kxF-DV-4ep" secondAttribute="trailing" id="60I-L5-oni"/>
-                                    <constraint firstAttribute="bottom" secondItem="kxF-DV-4ep" secondAttribute="bottom" id="RnA-TQ-amX"/>
-                                    <constraint firstItem="kxF-DV-4ep" firstAttribute="top" secondItem="UzY-wY-OGl" secondAttribute="top" id="WVc-F2-GnL"/>
-                                    <constraint firstItem="kxF-DV-4ep" firstAttribute="leading" secondItem="UzY-wY-OGl" secondAttribute="leading" id="h8c-og-RJb"/>
-                                </constraints>
-                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
+                                <rect key="frame" x="242" y="115" width="117" height="30"/>
+                                <state key="normal" title="Enter Sleep Time"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kxF-DV-4ep" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leadingMargin" id="5dB-Kv-slD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UzY-wY-OGl" secondAttribute="trailing" id="9YR-Ex-xae"/>
-                            <constraint firstItem="UzY-wY-OGl" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leadingMargin" id="Ec9-ka-4Tx"/>
-                            <constraint firstItem="ZJ5-69-u26" firstAttribute="top" secondItem="UzY-wY-OGl" secondAttribute="bottom" id="Oj0-rA-dxQ"/>
-                            <constraint firstItem="UzY-wY-OGl" firstAttribute="top" secondItem="Mgr-Qv-f8o" secondAttribute="topMargin" id="bCh-r5-Glp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kxF-DV-4ep" secondAttribute="trailing" id="uGX-B6-2jH"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="top" secondItem="lYH-jO-wZC" secondAttribute="bottom" constant="95" id="AdT-8G-Iua"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="centerX" secondItem="Mgr-Qv-f8o" secondAttribute="centerX" id="abv-nV-yey"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" id="2ke-Hr-Cau"/>
