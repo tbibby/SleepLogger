@@ -14,6 +14,13 @@
 		E972EAF01CA2B34F00DAA907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E972EAEE1CA2B34F00DAA907 /* LaunchScreen.storyboard */; };
 		E972EB211CA2D59500DAA907 /* TNPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB201CA2D59500DAA907 /* TNPersistenceController.m */; };
 		E972EB251CA2D78500DAA907 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E972EB231CA2D78500DAA907 /* DataModel.xcdatamodeld */; };
+		E972EB361CA2EF4900DAA907 /* Sleeps.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB2C1CA2EF4800DAA907 /* Sleeps.m */; };
+		E972EB381CA2EF4900DAA907 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB301CA2EF4800DAA907 /* Settings.m */; };
+		E972EB3A1CA2EF4900DAA907 /* Interruptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB341CA2EF4800DAA907 /* Interruptions.m */; };
+		E972EB3E1CA2EFEA00DAA907 /* SLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB3D1CA2EFEA00DAA907 /* SLDataController.m */; };
+		E972EB581CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB531CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m */; };
+		E972EB591CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB551CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m */; };
+		E972EB5A1CA2FC3F00DAA907 /* Settings+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB571CA2FC3F00DAA907 /* Settings+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,20 @@
 		E972EB1F1CA2D59500DAA907 /* TNPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNPersistenceController.h; sourceTree = "<group>"; };
 		E972EB201CA2D59500DAA907 /* TNPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNPersistenceController.m; sourceTree = "<group>"; };
 		E972EB241CA2D78500DAA907 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		E972EB2B1CA2EF4800DAA907 /* Sleeps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sleeps.h; sourceTree = "<group>"; };
+		E972EB2C1CA2EF4800DAA907 /* Sleeps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sleeps.m; sourceTree = "<group>"; };
+		E972EB2F1CA2EF4800DAA907 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		E972EB301CA2EF4800DAA907 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		E972EB331CA2EF4800DAA907 /* Interruptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interruptions.h; sourceTree = "<group>"; };
+		E972EB341CA2EF4800DAA907 /* Interruptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interruptions.m; sourceTree = "<group>"; };
+		E972EB3C1CA2EFEA00DAA907 /* SLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDataController.h; sourceTree = "<group>"; };
+		E972EB3D1CA2EFEA00DAA907 /* SLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDataController.m; sourceTree = "<group>"; };
+		E972EB521CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Interruptions+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E972EB531CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Interruptions+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E972EB541CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sleeps+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E972EB551CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Sleeps+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E972EB561CA2FC3F00DAA907 /* Settings+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Settings+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E972EB571CA2FC3F00DAA907 /* Settings+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Settings+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +104,10 @@
 			children = (
 				E972EB1F1CA2D59500DAA907 /* TNPersistenceController.h */,
 				E972EB201CA2D59500DAA907 /* TNPersistenceController.m */,
-				E972EB231CA2D78500DAA907 /* DataModel.xcdatamodeld */,
+				E972EB3C1CA2EFEA00DAA907 /* SLDataController.h */,
+				E972EB3D1CA2EFEA00DAA907 /* SLDataController.m */,
+				E972EB481CA2F4E900DAA907 /* Generated Entities and DataModel */,
+				E972EB3B1CA2EF5D00DAA907 /* NSManagedObjects */,
 			);
 			name = "Core Data";
 			path = SleepLogger;
@@ -113,6 +137,33 @@
 				E972EAE91CA2B34E00DAA907 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E972EB3B1CA2EF5D00DAA907 /* NSManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E972EB2B1CA2EF4800DAA907 /* Sleeps.h */,
+				E972EB2C1CA2EF4800DAA907 /* Sleeps.m */,
+				E972EB2F1CA2EF4800DAA907 /* Settings.h */,
+				E972EB301CA2EF4800DAA907 /* Settings.m */,
+				E972EB331CA2EF4800DAA907 /* Interruptions.h */,
+				E972EB341CA2EF4800DAA907 /* Interruptions.m */,
+			);
+			name = NSManagedObjects;
+			sourceTree = "<group>";
+		};
+		E972EB481CA2F4E900DAA907 /* Generated Entities and DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E972EB231CA2D78500DAA907 /* DataModel.xcdatamodeld */,
+				E972EB521CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.h */,
+				E972EB531CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m */,
+				E972EB541CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.h */,
+				E972EB551CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m */,
+				E972EB561CA2FC3F00DAA907 /* Settings+CoreDataProperties.h */,
+				E972EB571CA2FC3F00DAA907 /* Settings+CoreDataProperties.m */,
+			);
+			name = "Generated Entities and DataModel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E972EB3A1CA2EF4900DAA907 /* Interruptions.m in Sources */,
 				E972EAE51CA2B34E00DAA907 /* AppDelegate.m in Sources */,
+				E972EB581CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m in Sources */,
+				E972EB5A1CA2FC3F00DAA907 /* Settings+CoreDataProperties.m in Sources */,
+				E972EB591CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m in Sources */,
+				E972EB3E1CA2EFEA00DAA907 /* SLDataController.m in Sources */,
 				E972EB251CA2D78500DAA907 /* DataModel.xcdatamodeld in Sources */,
 				E972EB211CA2D59500DAA907 /* TNPersistenceController.m in Sources */,
 				E972EAE21CA2B34E00DAA907 /* main.m in Sources */,
+				E972EB381CA2EF4900DAA907 /* Settings.m in Sources */,
+				E972EB361CA2EF4900DAA907 /* Sleeps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +400,7 @@
 				E972EAF61CA2B34F00DAA907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
