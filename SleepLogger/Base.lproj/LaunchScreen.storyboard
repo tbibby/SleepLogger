@@ -17,18 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tG5-nG-Vxk">
-                                <rect key="frame" x="0.0" y="552" width="600" height="49"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tG5-nG-Vxk">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="PSl-tI-260"/>
-                                    <tabBarItem systemItem="more" id="Y9b-iK-KkZ"/>
+                                    <tabBarItem title="Log" id="PSl-tI-260"/>
+                                    <tabBarItem title="History" id="Y9b-iK-KkZ"/>
                                 </items>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tG5-nG-Vxk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="BX7-V2-UTU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tG5-nG-Vxk" secondAttribute="bottom" id="EGL-0v-Q1a"/>
+                            <constraint firstItem="tG5-nG-Vxk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bzg-8x-WlW"/>
                             <constraint firstAttribute="trailing" secondItem="tG5-nG-Vxk" secondAttribute="trailing" id="sOd-MV-Zcm"/>
                         </constraints>
                     </view>
