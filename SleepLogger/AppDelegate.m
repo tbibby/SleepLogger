@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "TNPersistenceController.h"
 
 @interface AppDelegate ()
+
+//set the persistence controller to readwrite for private use
+@property (strong, readwrite) TNPersistenceController *persistenceController;
+-(void)completeUserInterface;
 
 @end
 
@@ -20,13 +25,28 @@
     
     //create the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //set up the core data (returns immediately, will call completeUserInterface when done)
+    [self setPersistenceController:[[TNPersistenceController alloc]initWithCompletionHandler:^{
+        [self completeUserInterface];
+    }]];
+    
+    //in the meantime, let's just display the launch storyboard until completeUserInterface is called
+    UIStoryboard *splashStoryboard = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
+    UIViewController *splashVC = [splashStoryboard instantiateInitialViewController];
+    [self.window setRootViewController:splashVC];
+
+    [[self window]makeKeyAndVisible];
+    
+    return YES;
+}
+
+-(void)completeUserInterface
+{
     //we deleted the storyboard name from info.plist so we have to load our tab bar controller here instead
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"tab bar controller"];
     [[self window]setRootViewController:tabBarController];
-    [[self window]makeKeyAndVisible];
-    
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
