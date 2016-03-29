@@ -27,7 +27,7 @@
         <!--Log-->
         <scene sceneID="G2i-pe-eHn">
             <objects>
-                <viewController id="9cO-Is-fWp" sceneMemberID="viewController">
+                <viewController id="9cO-Is-fWp" customClass="SLLogViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYH-jO-wZC"/>
                         <viewControllerLayoutGuide type="bottom" id="ZJ5-69-u26"/>
@@ -39,6 +39,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
                                 <rect key="frame" x="242" y="115" width="117" height="30"/>
                                 <state key="normal" title="Enter Sleep Time"/>
+                                <connections>
+                                    <action selector="sleepButtonTapped:" destination="9cO-Is-fWp" eventType="touchUpInside" id="HoI-m3-l4x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,6 +53,9 @@
                     <tabBarItem key="tabBarItem" title="Log" id="2ke-Hr-Cau"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
+                    <connections>
+                        <outlet property="sleepButton" destination="Ouu-5i-i1j" id="scq-gj-Wj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zn-xS-hbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
