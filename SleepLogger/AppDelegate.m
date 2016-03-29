@@ -37,7 +37,8 @@
     [self.window setRootViewController:splashVC];
 
     [[self window]makeKeyAndVisible];
-    
+  
+  //BAZ CHANGES
     return YES;
 }
 
