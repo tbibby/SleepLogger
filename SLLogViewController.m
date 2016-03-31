@@ -59,7 +59,6 @@
         [interruptionLabel setHidden:YES];
         [wakeLabel setHidden:YES];
         [interruptionButton setEnabled:NO];
-//        NSLog(@"Interruption title color: %@, state %lu",[interruptionButton currentTitleColor],(unsigned long)[interruptionButton state]);
         [wakeButton setEnabled:NO];
     }
     
@@ -107,9 +106,7 @@
         [interruptionLabel setText:[interruptionsString stringByAppendingString:[NSString stringWithFormat:@"%ld",numberOfInterruptions]]];
     }
     
-    
-    
-//    NSLog(@"in view will appear, background color is %@",[[self view]backgroundColor]);
+  
     
     
 }

@@ -7,6 +7,8 @@
 //
 
 #import "SLHistoryTableViewController.h"
+#import "SLDataController.h"
+#import "Sleeps.h"
 
 @interface SLHistoryTableViewController ()
 
@@ -14,18 +16,32 @@
 
 @implementation SLHistoryTableViewController
 @synthesize historyTableView;
+@synthesize formatterDate;
+@synthesize formatterTime;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [historyTableView setDelegate:self];
     [historyTableView setDataSource:self];
     [historyTableView registerClass:[UITableViewCell class] forCellReuseIdentifier: @"SLHistoryTableViewCell"];
+    formatterDate = [[NSDateFormatter alloc]init];
+    formatterTime = [[NSDateFormatter alloc]init];
+    [formatterDate setDateStyle:NSDateFormatterMediumStyle];
+    [formatterDate setTimeStyle:NSDateFormatterNoStyle];
+    [formatterTime setDateStyle:NSDateFormatterNoStyle];
+    [formatterTime setTimeStyle:NSDateFormatterShortStyle];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self historyTableView]reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,9 +57,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Num rows");
-
-    return 1;
+    
+    return [[[SLDataController sharedController]allSleeps]count];
 }
 
 
@@ -54,8 +69,13 @@
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
+    Sleeps *currentSleep = [[[SLDataController sharedController]allSleeps]objectAtIndex:[indexPath row]];
+    [[cell textLabel]setText:[formatterDate stringFromDate:[currentSleep sleepStart]]];
+    NSString *sleepTimeString =[formatterTime stringFromDate:[currentSleep sleepStart]];
+    NSLog(@"sleep time: %@",sleepTimeString);
     
-    [[cell textLabel]setText:@"I am a cell"];
+    [[cell detailTextLabel] setText:sleepTimeString];
+    
     
     return cell;
 }

@@ -10,5 +10,7 @@
 
 @interface SLHistoryTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *historyTableView;
+@property (strong, nonatomic) NSDateFormatter *formatterDate;
+@property (strong, nonatomic) NSDateFormatter *formatterTime;
 
 @end
