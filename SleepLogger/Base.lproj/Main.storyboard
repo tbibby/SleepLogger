@@ -8,7 +8,7 @@
         <!--History-->
         <scene sceneID="r1s-Kl-LgX">
             <objects>
-                <viewController id="Mr0-Kg-XEx" sceneMemberID="viewController">
+                <viewController id="Mr0-Kg-XEx" customClass="SLHistoryTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NOf-5i-ChF"/>
                         <viewControllerLayoutGuide type="bottom" id="ff9-JJ-L29"/>
@@ -16,9 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="86u-9i-Pbh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-AV-ISH">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HZ3-AV-ISH" firstAttribute="leading" secondItem="86u-9i-Pbh" secondAttribute="leading" id="IGF-8t-NW4"/>
+                            <constraint firstItem="HZ3-AV-ISH" firstAttribute="top" secondItem="NOf-5i-ChF" secondAttribute="bottom" id="URa-7t-ByD"/>
+                            <constraint firstItem="ff9-JJ-L29" firstAttribute="top" secondItem="HZ3-AV-ISH" secondAttribute="bottom" id="WIx-cN-SLy"/>
+                            <constraint firstItem="HZ3-AV-ISH" firstAttribute="width" secondItem="86u-9i-Pbh" secondAttribute="width" id="wMq-MR-Bci"/>
+                            <constraint firstItem="HZ3-AV-ISH" firstAttribute="top" secondItem="NOf-5i-ChF" secondAttribute="bottom" id="zVa-dy-nt3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" id="WB2-av-1ry"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="HZ3-AV-ISH" id="fqn-Uf-V1m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrU-eb-MBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
