@@ -7,6 +7,7 @@
 //
 
 #import "TNPersistenceController.h"
+#import "SLDataController.h"
 
 @interface TNPersistenceController()
 //the main context is readwrite only for this class
@@ -31,6 +32,8 @@
     {
         [self setCompletionHandler:handler];
         [self initializeCoreData];
+        //setup our data controller here
+        [[SLDataController sharedController]setPersistenceController:self];
     }
     return self;
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E95E41111CAADA29000B056C /* SLLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95E41101CAADA29000B056C /* SLLogViewController.m */; };
+		E95E411E1CAD61C8000B056C /* SLTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95E411C1CAD61C8000B056C /* SLTimeViewController.m */; };
+		E95E411F1CAD61C8000B056C /* SLTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95E411D1CAD61C8000B056C /* SLTimeViewController.xib */; };
 		E972EAE21CA2B34E00DAA907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EAE11CA2B34E00DAA907 /* main.m */; };
 		E972EAE51CA2B34E00DAA907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EAE41CA2B34E00DAA907 /* AppDelegate.m */; };
 		E972EAEB1CA2B34E00DAA907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E972EAE91CA2B34E00DAA907 /* Main.storyboard */; };
@@ -28,6 +30,9 @@
 		E95E410D1CAAD43F000B056C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 		E95E410F1CAADA29000B056C /* SLLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLogViewController.h; sourceTree = "<group>"; };
 		E95E41101CAADA29000B056C /* SLLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLogViewController.m; sourceTree = "<group>"; };
+		E95E411B1CAD61C8000B056C /* SLTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTimeViewController.h; sourceTree = "<group>"; };
+		E95E411C1CAD61C8000B056C /* SLTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTimeViewController.m; sourceTree = "<group>"; };
+		E95E411D1CAD61C8000B056C /* SLTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLTimeViewController.xib; sourceTree = "<group>"; };
 		E972EADD1CA2B34E00DAA907 /* SleepLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E972EAE11CA2B34E00DAA907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E972EAE31CA2B34E00DAA907 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SleepLogger/AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +144,9 @@
 		E972EB281CA2D97000DAA907 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E95E411B1CAD61C8000B056C /* SLTimeViewController.h */,
+				E95E411C1CAD61C8000B056C /* SLTimeViewController.m */,
+				E95E411D1CAD61C8000B056C /* SLTimeViewController.xib */,
 				E972EAE91CA2B34E00DAA907 /* Main.storyboard */,
 				E95E410F1CAADA29000B056C /* SLLogViewController.h */,
 				E95E41101CAADA29000B056C /* SLLogViewController.m */,
@@ -233,6 +241,7 @@
 			files = (
 				E972EAF01CA2B34F00DAA907 /* LaunchScreen.storyboard in Resources */,
 				E972EAED1CA2B34F00DAA907 /* Assets.xcassets in Resources */,
+				E95E411F1CAD61C8000B056C /* SLTimeViewController.xib in Resources */,
 				E972EAEB1CA2B34E00DAA907 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +255,7 @@
 			files = (
 				E972EB3A1CA2EF4900DAA907 /* Interruptions.m in Sources */,
 				E972EAE51CA2B34E00DAA907 /* AppDelegate.m in Sources */,
+				E95E411E1CAD61C8000B056C /* SLTimeViewController.m in Sources */,
 				E972EB581CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m in Sources */,
 				E972EB5A1CA2FC3F00DAA907 /* Settings+CoreDataProperties.m in Sources */,
 				E95E41111CAADA29000B056C /* SLLogViewController.m in Sources */,

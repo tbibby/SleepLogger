@@ -158,6 +158,11 @@
     [self deleteManagedObject:s];
 }
 
+-(Sleeps *)lastSleep
+{
+    return [[self allSleeps]lastObject];
+}
+
 #pragma mark Interruptions
 -(NSInteger)numberOfInterruptions
 {

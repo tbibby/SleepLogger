@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--History-->
@@ -37,27 +36,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
-                                <rect key="frame" x="0.0" y="115" width="600" height="30"/>
-                                <state key="normal" title="Enter Sleep Time"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
+                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.33229692103952224" green="0.47212903900453629" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zXh-om-Egf"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Enter Sleep Time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="sleepButtonTapped:" destination="9cO-Is-fWp" eventType="touchUpInside" id="HoI-m3-l4x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="696-nz-rbY">
+                                <rect key="frame" x="0.0" y="200" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.33229692103952224" green="0.47212903900453629" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2p9-aa-jPx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Enter Interruption">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="interruptionButtonTapped:" destination="9cO-Is-fWp" eventType="touchUpInside" id="RuM-7p-1WM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozi-G0-9he">
+                                <rect key="frame" x="0.0" y="312" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.33229692103952224" green="0.47212903900453629" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GBl-Kp-EBv"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Enter Wake Time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wakeButtonTapped:" destination="9cO-Is-fWp" eventType="touchUpInside" id="ieK-Vn-mkB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S4-wR-i5L">
+                                <rect key="frame" x="0.0" y="140" width="600" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiZ-LP-lWG">
+                                <rect key="frame" x="0.0" y="252" width="600" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-Ha-Xar">
+                                <rect key="frame" x="0.0" y="364" width="600" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leadingMargin" id="5wW-QH-cHj"/>
-                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="top" secondItem="lYH-jO-wZC" secondAttribute="bottom" constant="95" id="AdT-8G-Iua"/>
-                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="centerX" secondItem="Mgr-Qv-f8o" secondAttribute="centerX" id="abv-nV-yey"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="oO8-78-Thr"/>
+                            <constraint firstItem="YiZ-LP-lWG" firstAttribute="trailing" secondItem="2S4-wR-i5L" secondAttribute="trailing" id="0be-IR-Vf8"/>
+                            <constraint firstItem="ozi-G0-9he" firstAttribute="width" secondItem="Ouu-5i-i1j" secondAttribute="width" id="3Sj-AC-bFt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="4uz-1b-j3h"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="top" secondItem="lYH-jO-wZC" secondAttribute="bottom" constant="68" id="5uL-SH-PYh"/>
+                            <constraint firstItem="696-nz-rbY" firstAttribute="top" secondItem="Ouu-5i-i1j" secondAttribute="bottom" constant="68" id="A8b-zQ-RYP"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="top" secondItem="Ouu-5i-i1j" secondAttribute="bottom" constant="8" id="Hqh-vQ-UiN"/>
+                            <constraint firstItem="ozi-G0-9he" firstAttribute="top" secondItem="696-nz-rbY" secondAttribute="bottom" constant="68" id="Hyk-4A-uw2"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="width" secondItem="Ouu-5i-i1j" secondAttribute="width" id="ITG-SD-85v"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="top" secondItem="Ouu-5i-i1j" secondAttribute="bottom" constant="8" id="LaY-Jv-pU4"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leading" id="Mv1-I0-mIf"/>
+                            <constraint firstItem="GTX-Ha-Xar" firstAttribute="top" secondItem="ozi-G0-9he" secondAttribute="bottom" constant="8" id="OtB-dQ-qK8"/>
+                            <constraint firstItem="ozi-G0-9he" firstAttribute="trailing" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="Pgu-V9-eFg"/>
+                            <constraint firstItem="YiZ-LP-lWG" firstAttribute="top" secondItem="696-nz-rbY" secondAttribute="bottom" constant="8" id="Pke-qS-x8m"/>
+                            <constraint firstItem="ozi-G0-9he" firstAttribute="height" secondItem="Ouu-5i-i1j" secondAttribute="height" id="Pss-NZ-XLm"/>
+                            <constraint firstItem="GTX-Ha-Xar" firstAttribute="trailing" secondItem="2S4-wR-i5L" secondAttribute="trailing" id="RdG-ra-M0D"/>
+                            <constraint firstItem="GTX-Ha-Xar" firstAttribute="top" secondItem="ozi-G0-9he" secondAttribute="bottom" constant="8" id="Rx8-43-Ffc"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="trailing" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="VGa-xa-apj"/>
+                            <constraint firstItem="GTX-Ha-Xar" firstAttribute="width" secondItem="2S4-wR-i5L" secondAttribute="width" id="Vlh-qq-g0T"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="width" secondItem="Ouu-5i-i1j" secondAttribute="width" id="WRI-2t-ryp"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="top" secondItem="lYH-jO-wZC" secondAttribute="bottom" constant="68" id="hkh-yN-sjs"/>
+                            <constraint firstItem="696-nz-rbY" firstAttribute="height" secondItem="Ouu-5i-i1j" secondAttribute="height" id="jhL-Lu-lmZ"/>
+                            <constraint firstItem="YiZ-LP-lWG" firstAttribute="width" secondItem="2S4-wR-i5L" secondAttribute="width" id="nhj-RU-gmH"/>
+                            <constraint firstItem="2S4-wR-i5L" firstAttribute="top" secondItem="Ouu-5i-i1j" secondAttribute="bottom" constant="8" id="oFl-82-t1t"/>
+                            <constraint firstItem="GTX-Ha-Xar" firstAttribute="top" secondItem="ozi-G0-9he" secondAttribute="bottom" constant="8" id="q9P-ee-aD2"/>
+                            <constraint firstItem="696-nz-rbY" firstAttribute="trailing" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="ruW-4k-FJT"/>
+                            <constraint firstItem="696-nz-rbY" firstAttribute="width" secondItem="Ouu-5i-i1j" secondAttribute="width" id="yEZ-of-2Mf"/>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leading" id="zU2-uo-9Vo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" id="2ke-Hr-Cau"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="interruptionButton" destination="696-nz-rbY" id="eRj-rl-yAV"/>
+                        <outlet property="interruptionLabel" destination="YiZ-LP-lWG" id="Jne-8C-pSl"/>
                         <outlet property="sleepButton" destination="Ouu-5i-i1j" id="scq-gj-Wj5"/>
+                        <outlet property="sleepLabel" destination="2S4-wR-i5L" id="gIE-cg-ZM2"/>
+                        <outlet property="wakeButton" destination="ozi-G0-9he" id="JUR-Uh-dNh"/>
+                        <outlet property="wakeLabel" destination="GTX-Ha-Xar" id="Mxh-WQ-LsG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zn-xS-hbK" userLabel="First Responder" sceneMemberID="firstResponder"/>

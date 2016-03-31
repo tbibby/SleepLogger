@@ -22,6 +22,7 @@
 -(Sleeps *)createSleep;
 -(NSArray *)allSleeps;
 -(void)deleteSleep:(Sleeps *)s;
+-(Sleeps *)lastSleep;
 
 -(NSInteger)numberOfInterruptions;
 -(Interruptions *)createInterruption;
