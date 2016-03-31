@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--History-->
@@ -36,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
-                                <rect key="frame" x="242" y="115" width="117" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-5i-i1j">
+                                <rect key="frame" x="0.0" y="115" width="600" height="30"/>
                                 <state key="normal" title="Enter Sleep Time"/>
                                 <connections>
                                     <action selector="sleepButtonTapped:" destination="9cO-Is-fWp" eventType="touchUpInside" id="HoI-m3-l4x"/>
@@ -46,8 +47,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ouu-5i-i1j" firstAttribute="leading" secondItem="Mgr-Qv-f8o" secondAttribute="leadingMargin" id="5wW-QH-cHj"/>
                             <constraint firstItem="Ouu-5i-i1j" firstAttribute="top" secondItem="lYH-jO-wZC" secondAttribute="bottom" constant="95" id="AdT-8G-Iua"/>
                             <constraint firstItem="Ouu-5i-i1j" firstAttribute="centerX" secondItem="Mgr-Qv-f8o" secondAttribute="centerX" id="abv-nV-yey"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ouu-5i-i1j" secondAttribute="trailing" id="oO8-78-Thr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" id="2ke-Hr-Cau"/>
