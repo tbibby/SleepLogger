@@ -103,7 +103,7 @@
         [sleepLabel setText:lastSleepString];
         
         NSInteger numberOfInterruptions = [[lastSleep sleepInterruptions]count];
-        [interruptionLabel setText:[interruptionsString stringByAppendingString:[NSString stringWithFormat:@"%ld",numberOfInterruptions]]];
+        [interruptionLabel setText:[interruptionsString stringByAppendingString:[NSString stringWithFormat:@"%ld",(long)numberOfInterruptions]]];
     }
     
   

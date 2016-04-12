@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLHistoryTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *historyTableView;
+@interface SLHistoryTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
 @property (strong, nonatomic) NSDateFormatter *formatterDate;
 @property (strong, nonatomic) NSDateFormatter *formatterTime;
 

@@ -153,6 +153,17 @@
     return [self allItemsForEntityName:NSStringFromClass([Sleeps class])];
 }
 
+-(NSArray *)allSleepsNewestFirst
+{
+    NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"locallyCreatedDate" ascending:NO];
+    NSArray *sortedArray =[[self allSleeps]sortedArrayUsingDescriptors:[NSArray arrayWithObject:sd]];
+    for (Sleeps *s in sortedArray)
+    {
+        NSLog(@"Sleep: %@",s.locallyCreatedDate);
+    }
+    return sortedArray;
+}
+
 -(void)deleteSleep:(Sleeps *)s
 {
     [self deleteManagedObject:s];

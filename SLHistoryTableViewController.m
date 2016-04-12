@@ -9,27 +9,29 @@
 #import "SLHistoryTableViewController.h"
 #import "SLDataController.h"
 #import "Sleeps.h"
+#import "SLHistoryTableViewCell.h"
+#import "SLHistoryDetailTableViewController.h"
 
 @interface SLHistoryTableViewController ()
 
 @end
 
 @implementation SLHistoryTableViewController
-@synthesize historyTableView;
 @synthesize formatterDate;
 @synthesize formatterTime;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [historyTableView setDelegate:self];
-    [historyTableView setDataSource:self];
-    [historyTableView registerClass:[UITableViewCell class] forCellReuseIdentifier: @"SLHistoryTableViewCell"];
+    [[self tableView] setDelegate:self];
+    [[self tableView] setDataSource:self];
+  //  [[self tableView] registerClass:[SLHistoryTableViewCell class] forCellReuseIdentifier: @"SLHistoryTableViewCell"];
     formatterDate = [[NSDateFormatter alloc]init];
     formatterTime = [[NSDateFormatter alloc]init];
     [formatterDate setDateStyle:NSDateFormatterMediumStyle];
     [formatterDate setTimeStyle:NSDateFormatterNoStyle];
     [formatterTime setDateStyle:NSDateFormatterNoStyle];
     [formatterTime setTimeStyle:NSDateFormatterShortStyle];
+    [[self navigationItem]setTitle:@"History"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,7 +43,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[self historyTableView]reloadData];
+    [[self tableView]reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,15 +71,30 @@
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
-    Sleeps *currentSleep = [[[SLDataController sharedController]allSleeps]objectAtIndex:[indexPath row]];
+    Sleeps *currentSleep = [[[SLDataController sharedController]allSleepsNewestFirst]objectAtIndex:[indexPath row]];
     [[cell textLabel]setText:[formatterDate stringFromDate:[currentSleep sleepStart]]];
     NSString *sleepTimeString =[formatterTime stringFromDate:[currentSleep sleepStart]];
+    if(currentSleep.sleepEnd)
+    {
+        sleepTimeString = [sleepTimeString stringByAppendingFormat:@" - %@", [formatterTime stringFromDate:[currentSleep sleepEnd]]];
+    }
+    sleepTimeString = [sleepTimeString stringByAppendingFormat:@" (%lu)",[[currentSleep sleepInterruptions]count]];
     NSLog(@"sleep time: %@",sleepTimeString);
     
     [[cell detailTextLabel] setText:sleepTimeString];
     
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     
     return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLHistoryDetailTableViewController *detailtvc = [[SLHistoryDetailTableViewController alloc]initWithStyle:UITableViewStyleGrouped];
+    [detailtvc setCurrentSleep:[[[SLDataController sharedController]allSleepsNewestFirst]objectAtIndex:[indexPath row]]];
+    [[self navigationController]pushViewController:detailtvc animated:YES];
 }
 
 

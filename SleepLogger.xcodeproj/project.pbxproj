@@ -25,6 +25,10 @@
 		E972EB581CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB531CA2FC3F00DAA907 /* Interruptions+CoreDataProperties.m */; };
 		E972EB591CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB551CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m */; };
 		E972EB5A1CA2FC3F00DAA907 /* Settings+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E972EB571CA2FC3F00DAA907 /* Settings+CoreDataProperties.m */; };
+		E9EC221C1CB554BE00D5B7BF /* SLHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC221B1CB554BE00D5B7BF /* SLHistoryTableViewCell.m */; };
+		E9EC221F1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC221E1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.m */; };
+		E9EC22231CB56EE400D5B7BF /* SLCenteredTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC22211CB56EE400D5B7BF /* SLCenteredTableViewCell.m */; };
+		E9EC22241CB56EE400D5B7BF /* SLCenteredTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9EC22221CB56EE400D5B7BF /* SLCenteredTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,13 @@
 		E972EB551CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Sleeps+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E972EB561CA2FC3F00DAA907 /* Settings+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Settings+CoreDataProperties.h"; sourceTree = "<group>"; };
 		E972EB571CA2FC3F00DAA907 /* Settings+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Settings+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9EC221A1CB554BE00D5B7BF /* SLHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryTableViewCell.h; sourceTree = "<group>"; };
+		E9EC221B1CB554BE00D5B7BF /* SLHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHistoryTableViewCell.m; sourceTree = "<group>"; };
+		E9EC221D1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHistoryDetailTableViewController.h; path = SleepLogger/SLHistoryDetailTableViewController.h; sourceTree = "<group>"; };
+		E9EC221E1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLHistoryDetailTableViewController.m; path = SleepLogger/SLHistoryDetailTableViewController.m; sourceTree = "<group>"; };
+		E9EC22201CB56EE400D5B7BF /* SLCenteredTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCenteredTableViewCell.h; sourceTree = "<group>"; };
+		E9EC22211CB56EE400D5B7BF /* SLCenteredTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCenteredTableViewCell.m; sourceTree = "<group>"; };
+		E9EC22221CB56EE400D5B7BF /* SLCenteredTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCenteredTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,14 +158,21 @@
 		E972EB281CA2D97000DAA907 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E9EC22201CB56EE400D5B7BF /* SLCenteredTableViewCell.h */,
+				E9EC22211CB56EE400D5B7BF /* SLCenteredTableViewCell.m */,
+				E9EC22221CB56EE400D5B7BF /* SLCenteredTableViewCell.xib */,
 				E95E411B1CAD61C8000B056C /* SLTimeViewController.h */,
 				E95E411C1CAD61C8000B056C /* SLTimeViewController.m */,
 				E95E411D1CAD61C8000B056C /* SLTimeViewController.xib */,
 				E972EAE91CA2B34E00DAA907 /* Main.storyboard */,
 				E95E41201CAD6E54000B056C /* SLHistoryTableViewController.h */,
 				E95E41211CAD6E54000B056C /* SLHistoryTableViewController.m */,
+				E9EC221A1CB554BE00D5B7BF /* SLHistoryTableViewCell.h */,
+				E9EC221B1CB554BE00D5B7BF /* SLHistoryTableViewCell.m */,
 				E95E410F1CAADA29000B056C /* SLLogViewController.h */,
 				E95E41101CAADA29000B056C /* SLLogViewController.m */,
+				E9EC221D1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.h */,
+				E9EC221E1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.m */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -248,6 +266,7 @@
 				E972EAED1CA2B34F00DAA907 /* Assets.xcassets in Resources */,
 				E95E411F1CAD61C8000B056C /* SLTimeViewController.xib in Resources */,
 				E972EAEB1CA2B34E00DAA907 /* Main.storyboard in Resources */,
+				E9EC22241CB56EE400D5B7BF /* SLCenteredTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E972EB3A1CA2EF4900DAA907 /* Interruptions.m in Sources */,
+				E9EC22231CB56EE400D5B7BF /* SLCenteredTableViewCell.m in Sources */,
 				E95E41221CAD6E54000B056C /* SLHistoryTableViewController.m in Sources */,
 				E972EAE51CA2B34E00DAA907 /* AppDelegate.m in Sources */,
 				E95E411E1CAD61C8000B056C /* SLTimeViewController.m in Sources */,
@@ -267,6 +287,8 @@
 				E95E41111CAADA29000B056C /* SLLogViewController.m in Sources */,
 				E972EB591CA2FC3F00DAA907 /* Sleeps+CoreDataProperties.m in Sources */,
 				E972EB3E1CA2EFEA00DAA907 /* SLDataController.m in Sources */,
+				E9EC221C1CB554BE00D5B7BF /* SLHistoryTableViewCell.m in Sources */,
+				E9EC221F1CB56ECC00D5B7BF /* SLHistoryDetailTableViewController.m in Sources */,
 				E972EB251CA2D78500DAA907 /* DataModel.xcdatamodeld in Sources */,
 				E972EB211CA2D59500DAA907 /* TNPersistenceController.m in Sources */,
 				E972EAE21CA2B34E00DAA907 /* main.m in Sources */,
